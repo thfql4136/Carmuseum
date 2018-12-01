@@ -1,0 +1,40 @@
+html, body {font-size: 15px; padding-bottom:5000px;}
+.wh {color:#fff;}
+.cur {cursor: pointer;}
+header{width:100%; height:15%; background-color: rgba(0,0,0,0.1); z-index:10; position:fixed;}
+.logo_box{width:25%; height:10%; position:fixed; z-index:10; left:5%; padding:1% 0%;}
+.logo > li{float:left;}
+.gnb_box {width:70%; height:10%; position:fixed; z-index:10;right:5%; }
+.green {background-color: #4a5e53; width:170px; height:40px; float:right; border-radius: 0  0 20px 20px; padding:13px 22px 0 0;
+margin-bottom:1%;}
+.login > li{float:right; font-size: 0.75rem; padding:0 3.5% 1% 0; }
+.login > li:nth-child(1) {padding-right:0; }
+.login > li:nth-child(5) {padding-left:5.2%;}
+.gnb > li{ float:right; padding:1% 2%;}
+.logo_img {width:30%;padding:1.5% 0 0 0; }
+.logo_img img {width:110px; }
+.logo_tit {text-align: center; padding-top:5%; color:#fbf8c7; }
+
+.navs_pc {display:block;}
+.navs_mo {display:none;}
+.navs_sub {width:100%; position: fixed; top:3.4em; z-index:9; display:none;}
+.navs_sub > li {padding:1em; background-color:rgba(255,255,255,0.1);}
+.dn_bg {background-color:rgba(255,255,255,0.1); color:#000; box-shadow:0 5px 5px rgba(0,0,0,0.4);}
+
+.bg{background-image: url("../img/main_img1.png"); background-repeat: no-repeat; background-size: 100% 80%; width:100%; height:100%;
+     position: absolute; top:-14%; left:0; z-index: -1;}
+.tire {width:25%; position: absolute; top:36%; left:35%;}
+.tire > img {width:100%;}
+.search_box {width:38%;  position: absolute; top:93%; left:30%; border:3px solid #c6d2c9;
+box-sizing: border-box; }
+.search_text {float:left;  padding:1.5% 2% 1% 2%; color:#abadae; font-size: 0.9rem;}
+.search {float:right; background-color: #c6d2c9; padding:1.5% 2% 1% 2%; cursor: pointer;}
+.search > i {color:#fff;}
+.line1 {width:100%; border:1px solid #82a69e; position: absolute; top:105%; opacity:0.1;}
+
+
+@media screen and (max-width:768px) {
+	.navs_pc {display:none;}
+	.navs_mo {display:block;}
+	.navs_sub {display:none;}
+}
