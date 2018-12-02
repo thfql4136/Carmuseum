@@ -19,3 +19,12 @@ $(window).scroll(function(){
 $(".fa-bars").click(function(){
 	$(".navs_sub").stop().slideToggle(100);
 });
+
+$('.movie_bg').tubular({ 
+    videoId: 'mAKsZ26SabQ',
+	repeat:flase
+ });
+
+ $(".museum").click(function(){
+	$(".slide_txt").stop().slideToggle(100);
+ });
