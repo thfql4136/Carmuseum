@@ -38,6 +38,8 @@ $('.movie_bg').tubular({
 	repeat:true
  });
 
- $(".museum").click(function(){
-	$(".slide_txt").stop().slideToggle(100);
+ $(".museum").hover(function(){
+	 $("ul",$(this)).slideDown();
+ }, function(){
+	$("ul",$(this)).slideUp();
  });
