@@ -9,6 +9,15 @@ function autoHeight(){
 }
 autoHeight();
 
+  $(window).resize(function(){resizeYoutube();
+});
+  $(function(){resizeYoutube();
+});
+  function resizeYoutube(){ $("iframe").each(function(){ if( /^https?:\/\/www.youtube.com\/embed\//g.test($(this).attr("src")) ){ $(this).css("width","100%"); $(this).css("height",Math.ceil( parseInt($(this).css("width")) * 1200 / 2000 ) + "px");} }); }
+
+
+
+출처: http://sometimes-n.tistory.com/42 [종종 올리는 블로그]
 
 
 $(window).scroll(function(){
