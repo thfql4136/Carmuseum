@@ -1,3 +1,16 @@
+function autoHeight(){
+    $(".hei-wrap").imagesLoaded().done(heiCalc);
+    $(window).resize(heiCalc);
+    function heiCalc(){
+        $(".hei-wrap").each(function(){
+            $(this).height($(this).find(".hei-elem").height());
+        });
+    }
+}
+autoHeight();
+
+
+
 $(window).scroll(function(){
 	var gap = $("html, body").scrollTop();
 	if(gap > 100) {
@@ -22,7 +35,7 @@ $(".fa-bars").click(function(){
 
 $('.movie_bg').tubular({ 
     videoId: 'mAKsZ26SabQ',
-	repeat:flase
+	repeat:true
  });
 
  $(".museum").click(function(){
