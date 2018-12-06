@@ -20,7 +20,11 @@ a{text-decoration:none; color:inherit;}
 .hand{cursor: pointer;}
 .clear{clear:both;}
 .clear:after{clear: both; content:""; display: block;}
+<<<<<<< HEAD
 .img {width: 100%;}
+=======
+.img{width: 100%;}
+>>>>>>> becd63f2037e8fc215b9d870286eaa68ff86d9ea
 .hover:hover{opacity: 0.8; }
 .hover_rev{opacity: 0.8; }
 .hover_rev:hover{opacity:1.0;}
