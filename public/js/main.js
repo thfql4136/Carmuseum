@@ -9,8 +9,6 @@ function autoHeight(){
 }
 autoHeight();
 
-<<<<<<< HEAD
-=======
   $(window).resize(function(){resizeYoutube();
 });
   $(function(){resizeYoutube();
@@ -20,7 +18,6 @@ autoHeight();
 
 
 출처: http://sometimes-n.tistory.com/42 [종종 올리는 블로그]
->>>>>>> becd63f2037e8fc215b9d870286eaa68ff86d9ea
 
 
 $(window).scroll(function(){

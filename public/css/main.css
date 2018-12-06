@@ -28,65 +28,6 @@ margin-bottom:1%;}
 .navs_sub > li {padding:1em;  color:#666; }
 .dn_bg {background-color:rgba(255,255,255,0.1); color:#000; box-shadow:0 5px 5px rgba(0,0,0,0.4);}
 
-<<<<<<< HEAD
-.main {width:100%; height:100%; position: relative;}
-.main > div {height:100%;}
-.bg {width:100%; height:50%; overflow-y:hidden; top:0; }
-.tire {width:50%; position: absolute; top:36%; left:35%;}
-.tire > img { min-width:45%; max-width:35%;}
-.che_left {position: absolute; top:60%; left:30%; font-size: 4rem; color:#4b6054;}
-.che_right {position: absolute; top:60%; right:35%;font-size: 4rem; color:#4b6054;}
-.search_box {width:45%;  position: absolute; top:97%; left:25%; border:3px solid #c6d2c9;
-box-sizing: border-box; }
-.search_text {float:left;  padding:1.5% 2% 1% 2%; color:#abadae; font-size: 0.9rem;}
-.search {float:right; background-color: #c6d2c9; padding:1.5% 2% 1% 2%; cursor: pointer;}
-.search > i {color:#fff;}
-.line1 {width:100%; border:1px solid #82a69e; position: absolute; top:105%; opacity:0.5;}
-
-.history {width:100%; height:100%; position: relative;}
-.wrap {position:absolute; top:10%; left:0; width:100%; height:80%;}
-.back_wheel {position: absolute; top:10%; left:-9%; opacity:0.3; z-index:-1; width:80%;}
-.back_wheel img {width:50%;}
-.his_en {width:20%; position: absolute; top:30%; left:43%; }
-.his_ko {width:10%; position: absolute; top:37%; left:40%; }
-.his_cont {width:75%; height:30%; background-color: #82a69e;
-z-index:-1; padding:10% 3%; float:right;}
-.his_tit {width:30%; position: absolute; top:60%; left:40%; font-size: 1.7rem; color:#fff;}
-.his_cont_txt {width:30%;  position: absolute; top:50%; left:36%; z-index:11; color:#fff; font-size: 0.9rem; background-color: #82a69e;
-text-align: justify;}
-.banz {width:70%; }
-.banz img {position: absolute; top:30%; right:7%; width:20%;}
-.year {font-size: 11rem; width:25%; position: absolute; top:80%; 
-	right:2%; font-weight: 700; color:#c3c3c3;}
-.his_img {width:80%;}
-.his_img img {position: absolute; top:90%; left:0%; width:25%; width:30%;}
-.but {position: absolute; top:110%; left:45%;}
-.line2 {width:100%; position: absolute; top:130%; border:1px solid #d6d7c8; }
-
-.facil {width:100%; height:700px; position: relative;}
-.fac_en {width:40%; position: absolute; top:38%; left:43%; }
-.fac_ko {width:10%; position: absolute; top:45%; left:40%; }
-.fac_box {width:100%; padding:18%; position: absolute; top:60%; background-color: #d6d7c8; z-index:-1;}
-
-.video {width:100%; height:700px; position: relative;}
-.vid_en{width:40%; position: absolute; top:47%; left:43%; }
-.vid_ko{width:10%; position: absolute; top:54%; left:40%; }
-.back_gear {width:80%; position: absolute; top:60%; left:-1%;  z-index:-1;}
-.back_gear img{width:50%; }
-.movie_box {width:30%;   }
-.movie_bg { max-width:50%;}
-.line3 {width:100%; position: absolute; top:150%; border:1px solid #e6efe5;}
-
-.news{width:100%; height:700px; position: relative;}
-.news_en{width:40%; position: absolute; top:56%; left:43%; }
-.news_ko{width:10%; position: absolute; top:63%; left:40%; }
-.news_box {width:100%; padding:18%; background-color:#e6efe5; position: absolute; top:78%; z-index:1; }
-
-.sns {width:100%; height:600px; position: relative; }
-.sns_en {width:40%; position: absolute; top:76%; left:43%; }
-.sns_ko {width:20%; position: absolute; top:84%; left:40%;}
-.sns_txt {width:20%; position: absolute; top:95%; left:42%; color:#999; font-size: 0.9rem;}
-=======
 .main {width:100%; height:100%; position: relative; margin-bottom:2%;}
 .bg{width:100%; height:75%; position: absolute; overflow-y: hidden; top:-10%;}
 .tire_box {width:50%;  }
@@ -181,7 +122,6 @@ margin:5% 0 2% 6%;}
 .sns_en {width:100%; position: absolute; top:160%; left:85%; }
 .sns_ko {width:70%; position: absolute; top:340%; left:70%;}
 .sns_txt {width:70%;  position: absolute;top:500%;  left:80%; color:#999; font-size: 0.9rem;}
->>>>>>> becd63f2037e8fc215b9d870286eaa68ff86d9ea
 .wheel1{ width:80%;position: absolute; top:50%; left:-3%;  z-index:-1; opacity:0.3;}
 .wheel1 >img {width:30%; }
 .wheel2{ width:40%;position: absolute; top:20%; right:-15%;  z-index:1; opacity:0.3;}
