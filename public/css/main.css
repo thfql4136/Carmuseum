@@ -187,5 +187,10 @@ margin:5% 0 2% 6%;}
 }
 @media screen and (max-width:480px){
 
+<<<<<<< HEAD
+	.tire { top:53%; }
+	.navs_sub > li {padding:0.5em;  font-size: 0.9rem; }
+=======
 	
+>>>>>>> becd63f2037e8fc215b9d870286eaa68ff86d9ea
 }

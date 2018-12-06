@@ -42,6 +42,8 @@ $(".fa-bars").click(function(){
 $('.movie_bg').tubular({ 
     videoId: 'mAKsZ26SabQ',
 	repeat:true
+<<<<<<< HEAD
+=======
  });
 
  $(".museum").hover(function(){
@@ -63,6 +65,7 @@ $('.movie_bg').tubular({
  $(".car_img > li").each(function(i){
 
 	 carPos();
+>>>>>>> becd63f2037e8fc215b9d870286eaa68ff86d9ea
  });
  function carAni(val) {
 	 $(".car_img").height($(".car_img > li").eq(cNum).height() +30);
