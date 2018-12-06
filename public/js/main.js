@@ -44,6 +44,54 @@ $('.movie_bg').tubular({
 	$("ul",$(this)).slideUp();
  });
 
+ var cNum = 0;	//현재의 index
+ var cLen = $(".car_img > li").length - 1;	//마지막 index (예:5개라면 0,1,2,3,4 -> 4)
+ var duration = 500;	//animate 속도
+ //최초 한번 실행
+ $(window).resize(function(){
+	 //본 작업을 진행하는 이유는 absolute 되어 있는 객체의 높이를 계산하기 위해서..
+	 $(".car_img").height($(".car_img > li").eq(cNum).height()+30);
+ }).trigger("resize");
+
+ carPos();
+ $(".car_img > li").each(function(i){
+
+	 carPos();
+ });
+ function carAni(val) {
+	 $(".car_img").height($(".car_img > li").eq(cNum).height() +30);
+	 $(".car_img > li").eq(cNum).css({"animation-name":"carAni", "animation-duration":duration*0.001+"s"});
+	 $(".car_img").stop().animate({"left":val}, duration, fbanPos);
+ }
+ function carPos() {
+	 $(".car_img > li").hide().css({"animation-name":""});
+	 $(".car_img > li").eq(cNum).show().css({"left":"44%","opacity":"1"});
+	 
+	 if(cNum == 0) {
+		$(".car_img > li").eq(cLen).show().css({"left":"10%"});
+		$(".car_img > li").eq(1).show().css({"left":"70%"});
+	 }
+	 else if(cNum == cLen) {
+		 $(".car_img > li").eq(cNum - 1).show().css({"left":"20%", "width":"45%"});
+		 $(".car_img > li").eq(0).show().css({"left":"70%", "width":"45%"});
+	 }
+	 else {
+		 $(".car_img > li").eq(cNum - 1).show().css({"left":"5%", "width":"45%"});
+		 $(".car_img > li").eq(cNum + 1).show().css({"left":"90%", "width":"45%"});
+		
+	 }
+ }
+ $(".che_left").click(function(){
+	 if(cNum == cLen) cNum = 0;
+	 else cNum++;
+	 carAni("100%");
+ });
+ $(".che_right").click(function(){
+	 if(cNum == 0) cNum = cLen;
+	 else cNum--;
+	 carAni("-50%");
+ });
+
  var fNum = 0;	//현재의 index
 	var fLen = $(".fban > li").length - 1;	//마지막 index (예:5개라면 0,1,2,3,4 -> 4)
 	var duration = 500;	//animate 속도
@@ -63,10 +111,12 @@ $('.movie_bg').tubular({
 		$(".fac_img").stop().animate({"left":val}, duration, fbanPos);
 	}
 	function fbanPos() {
+		var fac = $(".fac_dec > li").index();
 		$(".fac_img > li").hide().css({"animation-name":""});
 		$(".fac_img").css({"left":0});
 		$(".fac_img > li").eq(fNum).show().css({"left":"30%", "width":"50%", "top":"40%", "opacity":"1"});
-		$(".fac_dec").eq(fNum).show();
+		$(".fac_dec > li").eq(fNum).show();
+		
 		if(fNum == 0) {
 			$(".fac_img > li").eq(fLen).show().css({"left":"-17%", "width":"45%", "top":"44%","opacity":"0.4"});
 			$(".fac_img > li").eq(1).show().css({"left":"80%", "width":"45%", "top":"44%","opacity":"0.4"});
