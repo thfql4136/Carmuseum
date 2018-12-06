@@ -29,14 +29,15 @@ margin-bottom:1%;}
 .dn_bg {background-color:rgba(255,255,255,0.1); color:#000; box-shadow:0 5px 5px rgba(0,0,0,0.4);}
 
 .main {width:100%; height:100%; position: relative; margin-bottom:2%;}
-.bg{width:100%; height:75%; position: absolute; overflow-y: hidden; top:-10%;}
-.tire_box {width:50%;  }
-.tire {width:22%; position: absolute; top:40%; left:39%;}
-.car_box { width:100%; height:30%;}
-.che_left {position: absolute; top:60%; left:33%; font-size: 3.5rem; color:#4b6054; cursor: pointer;}
-.che_right {position: absolute; top:60%; right:33%;font-size: 3.5rem; color:#4b6054;cursor: pointer;}
-.car_box .car_img{ width:50%;   z-index: 11; }
-.car_img  > li {position: absolute; top:55%; animation-fill-mode: forwards; animation-timing-function: linear; width:50%; } 
+.bg {width:100%; overflow-y:hidden; border:1px solid #f00;}
+.bg > img {margin-bottom:-15%;}
+.tire_box {width:100%; position: absolute; text-align:center; transform:translateY(-65%); border:5px solid #0f0;}
+.tire {width:50%; max-width:450px; margin:0 auto;}
+.car_box {width:100%; position:absolute; border:5px solid #00f; top:50%;}
+.che_left {position: absolute; top:50%; transform:translateY(-50%); left:33%; font-size: 3.5rem; color:#4b6054; cursor: pointer;}
+.che_right {position: absolute; top:50%; transform:translateY(-50%); right:33%;font-size: 3.5rem; color:#4b6054;cursor: pointer;}
+.car_box .car_img {position:relative; left:60%;}
+.car_img  > li {animation-fill-mode: forwards; animation-timing-function: linear; width:20%; position: absolute; transform:translateY(-50%); border:1px solid #ff0;} 
 
 .search_box {width:50%; height:4%;  border:3px solid #c6d2c9; 
 line-height:4%; position: absolute; top:90%; left:25%;}
@@ -187,10 +188,5 @@ margin:5% 0 2% 6%;}
 }
 @media screen and (max-width:480px){
 
-<<<<<<< HEAD
-	.tire { top:53%; }
-	.navs_sub > li {padding:0.5em;  font-size: 0.9rem; }
-=======
 	
->>>>>>> becd63f2037e8fc215b9d870286eaa68ff86d9ea
 }

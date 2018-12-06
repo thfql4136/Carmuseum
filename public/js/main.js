@@ -9,15 +9,13 @@ function autoHeight(){
 }
 autoHeight();
 
-  $(window).resize(function(){resizeYoutube();
+/*
+$(window).resize(function(){resizeYoutube();
 });
   $(function(){resizeYoutube();
 });
   function resizeYoutube(){ $("iframe").each(function(){ if( /^https?:\/\/www.youtube.com\/embed\//g.test($(this).attr("src")) ){ $(this).css("width","100%"); $(this).css("height",Math.ceil( parseInt($(this).css("width")) * 1200 / 2000 ) + "px");} }); }
-
-
-
-출처: http://sometimes-n.tistory.com/42 [종종 올리는 블로그]
+*/
 
 
 $(window).scroll(function(){
@@ -45,8 +43,6 @@ $(".fa-bars").click(function(){
 $('.movie_bg').tubular({ 
     videoId: 'mAKsZ26SabQ',
 	repeat:true
-<<<<<<< HEAD
-=======
  });
 
  $(".museum").hover(function(){
@@ -55,6 +51,35 @@ $('.movie_bg').tubular({
 	$("ul",$(this)).slideUp();
  });
 
+var obj = null;
+var car = [];
+var carTemp = [];
+$(".car_img > li").each(function(i){
+	car[i] = $(this).remove();
+});
+var carNum = 0; 
+var carEnd = car.length - 1;
+
+function carInit() {
+	console.log(car);
+	carTemp[3] = carNum;
+	for(var i=3; i>0; i--) {
+		if(carTemp[i] - 1 >= 0) carTemp[i-1] = carTemp[i] - 1;
+		else carTemp[i-1] = carEnd;
+	}
+	for(var i=3; i<6; i++) {
+		if(carTemp[i] + 1 <= carEnd) carTemp[i+1] = carTemp[i] + 1;
+		else carTemp[i+1] = 0;
+	}
+	for(var i=0; i<7; i++) {
+		obj = car[carTemp[i]].clone().appendTo(".car_img");
+		obj.css({"left":(i-3)*20+"%"});
+		console.log(obj.children("img").attr("src"), obj.css("left"));
+	}
+}
+carInit();
+
+ /*
  var cNum = 0;	//현재의 index
  var cLen = $(".car_img > li").length - 1;	//마지막 index (예:5개라면 0,1,2,3,4 -> 4)
  var duration = 500;	//animate 속도
@@ -68,7 +93,6 @@ $('.movie_bg').tubular({
  $(".car_img > li").each(function(i){
 
 	 carPos();
->>>>>>> becd63f2037e8fc215b9d870286eaa68ff86d9ea
  });
  function carAni(val) {
 	 $(".car_img").height($(".car_img > li").eq(cNum).height() +30);
@@ -103,6 +127,8 @@ $('.movie_bg').tubular({
 	 else cNum--;
 	 carAni("-50%");
  });
+*/
+
 
  var fNum = 0;	//현재의 index
 	var fLen = $(".fban > li").length - 1;	//마지막 index (예:5개라면 0,1,2,3,4 -> 4)
