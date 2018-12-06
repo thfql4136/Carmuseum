@@ -17,9 +17,6 @@ autoHeight();
 
 
 
-출처: http://sometimes-n.tistory.com/42 [종종 올리는 블로그]
-
-
 $(window).scroll(function(){
 	var gap = $("html, body").scrollTop();
 	if(gap > 100) {
