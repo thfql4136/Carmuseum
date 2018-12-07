@@ -57,11 +57,14 @@ var carTemp = [];
 $(".car_img > li").each(function(i){
 	car[i] = $(this).remove();
 });
-var carNum = 0; 
+var carNum = 3; 
 var carEnd = car.length - 1;
+var scale = [];
+var left = 0;
+var interval = null;
 
 function carInit() {
-	console.log(car);
+	$(".car_img").empty();
 	carTemp[3] = carNum;
 	for(var i=3; i>0; i--) {
 		if(carTemp[i] - 1 >= 0) carTemp[i-1] = carTemp[i] - 1;
@@ -73,11 +76,28 @@ function carInit() {
 	}
 	for(var i=0; i<7; i++) {
 		obj = car[carTemp[i]].clone().appendTo(".car_img");
-		obj.css({"left":(i-3)*20+"%"});
-		console.log(obj.children("img").attr("src"), obj.css("left"));
+		left = (i-3)*20+"%";
+		scale[i] = (1 - (Math.abs(i-3)*0.3)).toFixed(2);
+		obj.css({"left":left});
+		obj.find("img").css({"width":(100*scale[i])+"%"});
 	}
+	console.log(scale);
 }
 carInit();
+
+function carAni() {
+	for(var i=0; i<7; i++) {
+		$(".car_img > li").eq(i).find("img").stop().animate({"width":(100*scale[i-1])+"%"}, 1000);
+	}
+	$(".car_box").stop().animate({"left":"-20%"}, 1000, function(){
+		if(carNum == carEnd) carNum = 0;
+		else carNum++;
+		carInit();
+		$(this).css({"left":0});
+	});
+}
+
+interval = setInterval(carAni, 3000);
 
  /*
  var cNum = 0;	//현재의 index
