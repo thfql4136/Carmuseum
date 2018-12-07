@@ -18,7 +18,7 @@ margin-bottom:1%;}
 .logo_tit {text-align: center; padding-top:5%; color:#fbf8c7; }
 .gnb {width: 100%; }
 .museum{width:15%; float:right; text-align: center; padding-top:1%;}
-.museum ul{display:none; padding-top:18%;}
+.museum ul{display:none; padding-top:26%;}
 .museum ul li {padding:3%; background-color: rgba(255,255,255,0.4);}
 .museum ul li:hover { background-color: rgba(0,0,0,0.4);}
 
@@ -144,10 +144,10 @@ margin:5% 0 2% 6%;}
 .rim5_img {width:40%;position: absolute; top:107.5%; left:77%; }
 .rim5_img > img{width:30%;}
 
-.foot {width:100%; height:40%;  }
+.foot {width:100%; height:28%;  }
 .foot_bg{ width:100%; height:100%; background-color: #4b6054; z-index:-1;}
 .foot_cont {width:40%;   margin-top:3%; margin-left:15%;}
-.foot_logo {width:100%; padding-top:3%;}
+.foot_logo {width:100%; }
 .foot_logo > li{float:left;}
 .f_logo > img{width:80%;}
 .f_txt {text-align: center; color:#fbf8c7; padding:3% 6% 0 0; }

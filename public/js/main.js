@@ -15,11 +15,7 @@ $(window).resize(function(){resizeYoutube();
   $(function(){resizeYoutube();
 });
   function resizeYoutube(){ $("iframe").each(function(){ if( /^https?:\/\/www.youtube.com\/embed\//g.test($(this).attr("src")) ){ $(this).css("width","100%"); $(this).css("height",Math.ceil( parseInt($(this).css("width")) * 1200 / 2000 ) + "px");} }); }
-<<<<<<< HEAD
-
-=======
 */
->>>>>>> c2b51a0f61499f627d06b42efcd80295a1d370ac
 
 
 $(window).scroll(function(){
