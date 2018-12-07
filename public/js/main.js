@@ -9,12 +9,17 @@ function autoHeight(){
 }
 autoHeight();
 
-  $(window).resize(function(){resizeYoutube();
+/*
+$(window).resize(function(){resizeYoutube();
 });
   $(function(){resizeYoutube();
 });
   function resizeYoutube(){ $("iframe").each(function(){ if( /^https?:\/\/www.youtube.com\/embed\//g.test($(this).attr("src")) ){ $(this).css("width","100%"); $(this).css("height",Math.ceil( parseInt($(this).css("width")) * 1200 / 2000 ) + "px");} }); }
+<<<<<<< HEAD
 
+=======
+*/
+>>>>>>> c2b51a0f61499f627d06b42efcd80295a1d370ac
 
 
 $(window).scroll(function(){
@@ -42,8 +47,6 @@ $(".fa-bars").click(function(){
 $('.movie_bg').tubular({ 
     videoId: 'mAKsZ26SabQ',
 	repeat:true
-<<<<<<< HEAD
-=======
  });
 
  $(".museum").hover(function(){
@@ -52,6 +55,55 @@ $('.movie_bg').tubular({
 	$("ul",$(this)).slideUp();
  });
 
+var obj = null;
+var car = [];
+var carTemp = [];
+$(".car_img > li").each(function(i){
+	car[i] = $(this).remove();
+});
+var carNum = 3; 
+var carEnd = car.length - 1;
+var scale = [];
+var left = 0;
+var interval = null;
+
+function carInit() {
+	$(".car_img").empty();
+	carTemp[3] = carNum;
+	for(var i=3; i>0; i--) {
+		if(carTemp[i] - 1 >= 0) carTemp[i-1] = carTemp[i] - 1;
+		else carTemp[i-1] = carEnd;
+	}
+	for(var i=3; i<6; i++) {
+		if(carTemp[i] + 1 <= carEnd) carTemp[i+1] = carTemp[i] + 1;
+		else carTemp[i+1] = 0;
+	}
+	for(var i=0; i<7; i++) {
+		obj = car[carTemp[i]].clone().appendTo(".car_img");
+		left = (i-3)*20+"%";
+		scale[i] = (1 - (Math.abs(i-3)*0.3)).toFixed(2);
+		obj.css({"left":left});
+		obj.find("img").css({"width":(100*scale[i])+"%"});
+	}
+	console.log(scale);
+}
+carInit();
+
+function carAni() {
+	for(var i=0; i<7; i++) {
+		$(".car_img > li").eq(i).find("img").stop().animate({"width":(100*scale[i-1])+"%"}, 1000);
+	}
+	$(".car_box").stop().animate({"left":"-20%"}, 1000, function(){
+		if(carNum == carEnd) carNum = 0;
+		else carNum++;
+		carInit();
+		$(this).css({"left":0});
+	});
+}
+
+interval = setInterval(carAni, 3000);
+
+ /*
  var cNum = 0;	//현재의 index
  var cLen = $(".car_img > li").length - 1;	//마지막 index (예:5개라면 0,1,2,3,4 -> 4)
  var duration = 500;	//animate 속도
@@ -65,7 +117,6 @@ $('.movie_bg').tubular({
  $(".car_img > li").each(function(i){
 
 	 carPos();
->>>>>>> becd63f2037e8fc215b9d870286eaa68ff86d9ea
  });
  function carAni(val) {
 	 $(".car_img").height($(".car_img > li").eq(cNum).height() +30);
@@ -100,6 +151,8 @@ $('.movie_bg').tubular({
 	 else cNum--;
 	 carAni("-50%");
  });
+*/
+
 
  var fNum = 0;	//현재의 index
 	var fLen = $(".fban > li").length - 1;	//마지막 index (예:5개라면 0,1,2,3,4 -> 4)
