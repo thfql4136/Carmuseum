@@ -99,6 +99,8 @@ function carAni() {
 
 interval = setInterval(carAni, 3000);
 
+
+
  /*
  var cNum = 0;	//현재의 index
  var cLen = $(".car_img > li").length - 1;	//마지막 index (예:5개라면 0,1,2,3,4 -> 4)
@@ -169,7 +171,10 @@ interval = setInterval(carAni, 3000);
 		$(".fac_img").stop().animate({"left":val}, duration, fbanPos);
 	}
 	function fbanPos() {
-		var fac = $(".fac_dec > li").index();
+		
+		// for(var i = 0; i<$(".fac_dec > li").length; i++){
+		// 	$(".fac_dec >li").find(".wh_line").eq(i).show();
+		// }
 		$(".fac_img > li").hide().css({"animation-name":""});
 		$(".fac_img").css({"left":0});
 		$(".fac_img > li").eq(fNum).show().css({"left":"30%", "width":"50%", "top":"40%", "opacity":"1"});

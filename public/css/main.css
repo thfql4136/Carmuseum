@@ -60,7 +60,7 @@ z-index:1; margin-top:17%; }
 .banz > div > img {width:50%;}
 .year {font-size: 13rem; width:25%; position: absolute; top:80%; 
 	left:-5%; font-weight: 700; color:#c3c3c3; opacity: 0.8; z-index: 1;}
-.his_cont_txt {width:55%;text-align: justify; padding:5% 0 0 20%;  color:#fff;}
+.his_cont_txt {width:55%;text-align: justify; padding:0% 0 0 20%;  color:#fff;}
 .his_txt {width:30%; height:20%; font-size: 1.5rem; color:#fff; display:table;}
 .cell {display:table-cell; vertical-align: middle; }
 .cell > span {font-size: 1.5rem; color:#fff;}
@@ -75,7 +75,7 @@ margin:5% 0 2% 6%;}
 .facil {width:100%; height:80%; position: relative; border-top:1px solid #d6d7c8; margin-bottom:13%;}
 .fac_txt {width:50%; height:5%; position: relative; margin:4% 0 7% 0; }
 .fac_en {width:100%; position: absolute; top:0%; left:80%; }
-.fac_ko {width:70%; position: absolute; top:140%; left:70%; }
+.fac_ko {width:70%; position: absolute; top:60%; left:-10%; }
 .fac_box {background-color: #d6d7c8; z-index:-1; width:100%; height:90%; }
 .fac_img {width:50%; overflow: hidden;}
 .fac_img > li {width:50%; position: absolute;top:40%; animation-fill-mode: forwards; animation-timing-function: linear;}
@@ -92,7 +92,7 @@ margin:5% 0 2% 6%;}
 .black_txt > p{padding:10% 0 0 15%; text-align: justify;}
 @keyframes fbanAni{
 	0%{transform:scale(0.1); opacity:0.3;}
-	50%{transform:scale(0.2); opacity:0.7;}
+	10%{transform:scale(0.2); opacity:0.5;}
 	100%{opacity:1;}
 	
 }
@@ -100,54 +100,50 @@ margin:5% 0 2% 6%;}
 .video {width:100%; height:80%; position: relative; margin-bottom:7%;}
 .vid_txt {width:50%; height:5%; position: relative;  }
 .vid_en{width:100%; position: absolute; top:0; left:95%; }
-.vid_ko{width:70%; position: absolute; top:140%; left:90%; }
+.vid_ko{width:70%; position: absolute; top:60%; left:-5%; }
 .back_gear{background-image: url("../img/back_gear.png"); background-repeat: no-repeat; width:50%; height:100%; z-index: -1;
 	background-size: 85%; position: absolute; left:-3%; top:-2%;  opacity: 0.7;}
 .movie_box {margin:0 auto; position: relative; width:70%; height: 0; padding-bottom: 39.375%;}
-.movie_box > iframe { border:10px solid #000; z-index: 111; position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+.movie_box > iframe { border:10px solid #000; z-index: 111; position: absolute; top: 10%; left: 0; width: 100%; height: 100%;}
 .movie_bg { width:50%; height:50%;}
 
 
 .news{width:100%; height:85%; position: relative; border-top:1px solid #e6efe5; margin-bottom:7%;}
 .news_txt {width:50%; height:5%; position: relative; margin:4% 0 7% 0; }
 .news_en{width:100%; position: absolute; top:0; left:80%; }
-.news_ko{width:70%; position: absolute; top:140%; left:70%; }
+.news_ko{width:70%; position: absolute; top:60%; left:-10%; }
 .news_box {width:100%;height:85%;  background-color:#e6efe5;  z-index:1; }
 
-.sns {width:100%; height:70%; position: relative; }
+.sns {width:100%; height:50%; position: relative; }
 .sns_box {width:50%; height:5%; position: relative;  }
 .sns_en {width:100%; position: absolute; top:10%; left:85%; }
-.sns_ko {width:70%; position: absolute; top:50%; left:-10%;}
-.sns_txt {width:70%;  position: absolute;top:70%;  left:10%; color:#999; font-size: 0.9rem;}
-.wheel1{ width:100%;  z-index:-1; opacity:0.3;}
-.wheel1 >img {width:50%; position: absolute; top:-10%; left:-3%; }
-.wheel2{ width:40%;position: absolute; top:20%; right:-15%;  z-index:1; opacity:0.3;}
+.sns_ko {width:70%; position: absolute; top:60%; left:-15%;}
+.sns_txt {width:70%;  position: absolute;top:120%;  left:-5%; color:#999; font-size: 0.9rem;}
+.wheel1{ width:50%;  z-index:-1; opacity:0.3; position: absolute; top:-10%; left:-3%;}
+.wheel1 >img {width:40%;  }
+.wheel2{ width:40%;position: absolute; top:-60%; right:-15%;  z-index:1; opacity:0.3;}
 .wheel2 >img {width:80%; }
-.rim1 {width:60%;position: absolute; top:100%; left:2%;  opacity:0.7;}
-.rim1 > img {width:30%;}
-.rim1_img {width:40%;position: absolute; top:107.5%; left:5%; }
-.rim1_img > img{width:30%;}
-.rim2 {width:60%;position: absolute; top:100%; left:20%;  opacity:0.7;}
-.rim2 > img {width:30%;}
-.rim2_img {width:40%;position: absolute; top:108%; left:23%; }
-.rim2_img > img{width:30%;}
-.rim3 {width:60%;position: absolute; top:100%; left:38%;  opacity:0.7;}
-.rim3 > img {width:30%;}
-.rim3_img {width:40%;position: absolute; top:107.5%; left:41%; }
-.rim3_img > img{width:30%;}
-.rim4 {width:60%;position: absolute; top:100%; left:56%;  opacity:0.7;}
-.rim4 > img {width:30%;}
-.rim4_img {width:40%;position: absolute; top:107.5%; left:59%; }
-.rim4_img > img{width:30%;}
-.rim5 {width:60%;position: absolute; top:100%; left:74%;  opacity:0.7;}
-.rim5 > img {width:30%;}
-.rim5_img {width:40%;position: absolute; top:107.5%; left:77%; }
-.rim5_img > img{width:30%;}
+.rim {position: relative; top:10%; width:100%; height:100%;}
+.rim_wheel1 {width:70%;position: absolute; top:20%; left:2%; min-width:400px; }
+.rim_wheel1 > img {width:27%; opacity:0.7; }
+.rim1_img > img{width:18%; position: absolute; top:16%; left:4.5%; }
+.rim_wheel2 {width:70%;position: absolute; top:20%; left:20%; min-width:400px; }
+.rim_wheel2 > img {width:27%; opacity:0.7; }
+.rim2_img > img{width:18%; position: absolute; top:16%; left:4.5%; }
+.rim_wheel3 {width:70%;position: absolute; top:20%; left:38%; min-width:400px; }
+.rim_wheel3 > img {width:27%; opacity:0.7; }
+.rim3_img > img{width:18%; position: absolute; top:16%; left:4.5%; }
+.rim_wheel4 {width:70%;position: absolute; top:20%; left:56%; min-width:400px; }
+.rim_wheel4 > img {width:27%; opacity:0.7; }
+.rim4_img > img{width:18%; position: absolute; top:16%; left:4.5%; }
+.rim_wheel5 {width:70%;position: absolute; top:20%; left:74%; min-width:400px; }
+.rim_wheel5 > img {width:27%; opacity:0.7; }
+.rim5_img > img{width:18%; position: absolute; top:16%; left:4.5%; }
 
 .foot {width:100%; height:28%;  }
-.foot_bg{ width:100%; height:100%; background-color: #4b6054; z-index:-1;}
-.foot_cont {width:40%;   margin-top:3%; margin-left:15%;}
-.foot_logo {width:100%; }
+.foot_bg{ width:100%; height:100%; }
+.foot_cont {width:100%;   margin-top:3%;  background-color: #4b6054; z-index:-1;}
+.foot_logo {width:40%; }
 .foot_logo > li{float:left;}
 .f_logo > img{width:80%;}
 .f_txt {text-align: center; color:#fbf8c7; padding:3% 6% 0 0; }
