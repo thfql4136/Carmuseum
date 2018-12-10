@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../css/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e50710521bdba057752faf9a302249da"></script>
     <script src="../js/jquery.tubular.1.0.js"></script>
     <title>세계 자동차 제주 박물관</title>
 </head>
@@ -37,7 +38,7 @@
             <div class="navs_pc clear gnb">
                 <div class="museum cur">
                     <div class="en">MUSEUM SHOP</div>
-                    <ul>
+                    <ul class="list">
                         <li>모형자동차</li>
                         <li>신상품</li>
                         <li>자동차회사</li>
@@ -47,7 +48,7 @@
                 </div>
                 <div class="museum cur">
                     <div class="en">COMMUNITY</div>
-                    <ul>
+                    <ul class="list">
                         <li>관람후기</li>
                         <li>포토갤러리</li>
                         <li>박물관 갤러리</li>
@@ -59,7 +60,7 @@
                 </div>
                 <div class="museum cur">
                     <div class="en">INFORMATION</div>
-                    <ul>
+                    <ul class="list">
                         <li>제주도의 유래</li>
                         <li>박물관 새소식</li>
                         <li>보도자료</li>
@@ -70,7 +71,7 @@
                 </div>
                 <div class="museum cur">
                     <div class="en">FACILITIES GUIES</div>
-                    <ul>
+                    <ul class="list">
                         <li>운영 안내</li>
                         <li>로비관</li>
                         <li>영상관</li>
@@ -84,14 +85,14 @@
                 </div>
                 <div class="museum cur">
                     <div class="en">HISTORY</div>
-                    <ul>
+                    <ul class="list">
                         <li>자동차 역사</li>
                         <li>자동차 정보 검색</li>
                     </ul>
                 </div>
                 <div class="museum cur">
                     <div class="en">INTRODUCTION</div>
-                    <ul>
+                    <ul class="list">
                         <li>인사말</li>
                         <li>관람 포인트</li>
                         <li>시설개요 및 연혁</li>
@@ -140,19 +141,16 @@
             </div>
             <div class="che_left"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
             <div class="che_right"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+            <div class="search_box clear">
+                    <div class="search_text">
+                        자동차 관련단어를 입력하시면 등록된 정보를 열람하실수 있습니다. 예) 크라이슬러
+                    </div>
+                    <div class="search">
+                        <i class="fa fa-search"></i>
+                    </div>
+                </div>
+               
         </div>
-
-        
-        
-        <div class="search_box clear">
-            <div class="search_text">
-                자동차 관련단어를 입력하시면 등록된 정보를 열람하실수 있습니다. 예) 크라이슬러
-            </div>
-            <div class="search">
-                <i class="fa fa-search"></i>
-            </div>
-        </div>
-        <div class="line1"></div>
     </section>
 
     <section class="history">
@@ -214,7 +212,7 @@
             <div class="fac_en"><span class="en font1">FACILITIES GUIES</span>
                 <div class="fac_ko"><span class="font2">시설 안내</span></div>
             </div>
-            
+         
         </div>
         <div class="fac_box">
             <ul class="fac_img">
@@ -223,6 +221,7 @@
                 <li><img src="../img/facility3.PNG"></li>
                 <li><img src="../img/facility4.PNG"></li>
                 <li><img src="../img/facility5.PNG"></li>
+               
             </ul>
             <ul class="fac_dec">
                 <li>
@@ -255,10 +254,13 @@
                         </div>
                     </div>
                 </li>
+               
             </ul>
             <div class="cur fac_left fac"><i class="fa fa-chevron-left" aria-hidden="true"></i>
             </div>
             <div class="cur fac_right fac"><i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </div>
+            </div>
     </section>
 
     <section class="video">
@@ -334,7 +336,8 @@
     </section>
 
     <footer class="foot">
-            <div class="foot_cont">
+            <div class="foot_cont clear">
+                <div class="foot_box">
                 <ul class="foot_logo clear">
                     <li class="f_logo">
                         <img src="../img/logo.png">
@@ -363,10 +366,13 @@
                     </li>
                 </ul>
             </div>
-            <div class="map">
-
+                <div class="map">
+                    <div id="map" style="width:350px;height:250px;"></div>
+                </div>
             </div>
+          
     </footer>
+    
     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
     <script src="../js/main.js"></script>
 </body>
