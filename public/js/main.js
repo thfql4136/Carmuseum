@@ -1,14 +1,14 @@
 function autoHeight(){
     $(".hei-wrap").imagesLoaded().done(heiCalc);
-    $(window).resize(heiCalc);
-    function heiCalc(){
-        $(".hei-wrap").each(function(){
-            $(this).height($(this).find(".hei-elem").height());
-        });
-    }
+    $(window).resize(heiCalc).trigger("resize");	
 }
 autoHeight();
 
+function heiCalc(){
+	$(".hei-wrap").each(function(){
+			$(this).height($(this).find(".hei-elem").height());
+	});
+}
 
 
 $(window).scroll(function(){
@@ -55,6 +55,7 @@ var carEnd = car.length - 1;
 var scale = [];
 var left = 0;
 var interval = null;
+var direction = -1;
 
 function carInit() {
 	$(".car_img").empty();
@@ -70,27 +71,61 @@ function carInit() {
 	for(var i=0; i<7; i++) {
 		obj = car[carTemp[i]].clone().appendTo(".car_img");
 		left = (i-3)*20+"%";
-		scale[i] = (1 - (Math.abs(i-3)*0.3)).toFixed(2);
+		if(direction == -1) scale[i] = (1 - (Math.abs(i-3)*0.3)).toFixed(2);
+		else scale[i] = (1 - (Math.abs(i-3)*0.3)).toFixed(2);
 		obj.css({"left":left});
 		obj.find("img").css({"width":(100*scale[i])+"%"});
 	}
-	console.log(scale);
+	$(".car_img > li").eq(0).css({"text-align":"right"});
+	$(".car_img > li").eq(1).css({"text-align":"right"});
+	$(".car_img > li").eq(2).css({"text-align":"center"});
+	$(".car_img > li").eq(3).css({"text-align":"center"});
+	$(".car_img > li").eq(4).css({"text-align":"center"});
+	$(".car_img > li").eq(5).css({"text-align":"left"});
+	$(".car_img > li").eq(6).css({"text-align":"left"});
 }
 carInit();
 
 function carAni() {
 	for(var i=0; i<7; i++) {
-		$(".car_img > li").eq(i).find("img").stop().animate({"width":(100*scale[i-1])+"%"}, 1000);
+		if(direction == -1) $(".car_img > li").eq(i).find("img").stop().animate({"width":(100*scale[i-1])+"%"}, 1000);
+		else  $(".car_img > li").eq(i).find("img").stop().animate({"width":(100*scale[i+1])+"%"}, 1000);
 	}
-	$(".car_box").stop().animate({"left":"-20%"}, 1000, function(){
-		if(carNum == carEnd) carNum = 0;
-		else carNum++;
+	$(".car_img > li").eq(0).css({"text-align":"right"});
+	if(direction == -1) $(".car_img > li").eq(1).css({"text-align":"right"});
+	else $(".car_img > li").eq(1).css({"text-align":"center"});
+	if(direction == -1) $(".car_img > li").eq(2).css({"text-align":"right"});
+	else  $(".car_img > li").eq(2).css({"text-align":"center"});
+	$(".car_img > li").eq(3).css({"text-align":"center"});
+	if(direction == -1) $(".car_img > li").eq(4).css({"text-align":"center"});
+	else $(".car_img > li").eq(4).css({"text-align":"left"});
+	if(direction == -1) $(".car_img > li").eq(5).css({"text-align":"center"});
+	else $(".car_img > li").eq(5).css({"text-align":"center"});
+	if(direction == -1) $(".car_img > li").eq(6).css({"text-align":"left"});
+	else $(".car_img > li").eq(6).css({"text-align":"left"});
+	$(".car_box").stop().animate({"left":(20*direction)+"%"}, 1000, function(){
+		if(direction == 1) {
+			if(carNum == 0) carNum = carEnd;
+			else carNum--;
+		}
+		else {
+			if(carNum == carEnd) carNum = 0;
+			else carNum++;
+		}
 		carInit();
 		$(this).css({"left":0});
 	});
 }
 
-interval = setInterval(carAni, 3000);
+$(".che_left").click(function(){
+	direction = -1;
+	carAni();
+});
+
+$(".che_right").click(function(){
+	direction = 1;
+	carAni();
+});
 
 var mNum = 0;
 var imgs = [];
@@ -155,6 +190,10 @@ mInit();
 
 var rimInterval = setInterval(rimAni, 20);
 function rimAni(){
+	var wid = $(".rim").width()/2;
+	var left = $(".rim").position().left;
+	console.log(wid, left);
+	if(wid + left <= 0) $(".rim").css({"left":0}); 
 	$(".rim").stop().css({"left":"-=1px"});
 }
 
