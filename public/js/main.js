@@ -9,7 +9,28 @@ function heiCalc(){
 			$(this).height($(this).find(".hei-elem").height());
 	});
 }
-
+var n4 = 0;
+var interval4;
+var depth = -1;
+var interval4 = setInterval(slide4, 2000);
+function slide4(){
+  $(".ban > img").eq(n4).css({"display":"none", "z-index":depth++}).stop().fadeIn(1000, function(){
+    if(n4 == 4) n4 = -1;
+    n4++;
+  });
+}
+function paging4(obj){ 
+  n4 = $(obj).index(); 
+   clearInterval(interval4); 
+   slide4(); 
+   interval4 = setInterval(slide4, 2000);
+ }
+ $(".ban").hover(function (){
+clearInterval(interval4);
+ }, function (){
+   interval4 = setInterval(slide4, 2000);
+ });
+  
 
 $(window).scroll(function(){
 	var gap = $("html, body").scrollTop();
@@ -206,5 +227,13 @@ function rimAni(){
 	};
 
 	var map = new daum.maps.Map(container, options);
+
+	
+	$(function() {
+		function swing() {
+			$('.circle').animate({'top':'5px', 'opacity':'1'},1000).animate({'top':'20px', 'opacity':'0'},1000, swing);
+		}
+		swing();
+	});
 
 	
