@@ -9,13 +9,6 @@ function autoHeight(){
 }
 autoHeight();
 
-/*
-$(window).resize(function(){resizeYoutube();
-});
-  $(function(){resizeYoutube();
-});
-  function resizeYoutube(){ $("iframe").each(function(){ if( /^https?:\/\/www.youtube.com\/embed\//g.test($(this).attr("src")) ){ $(this).css("width","100%"); $(this).css("height",Math.ceil( parseInt($(this).css("width")) * 1200 / 2000 ) + "px");} }); }
-*/
 
 
 $(window).scroll(function(){
@@ -176,4 +169,3 @@ function rimAni(){
 	var map = new daum.maps.Map(container, options);
 
 	
-$(".rim_wheel1").rotate();
