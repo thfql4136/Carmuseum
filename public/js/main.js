@@ -9,13 +9,14 @@ function heiCalc(){
 			$(this).height($(this).find(".hei-elem").height());
 	});
 }
+
 var n4 = 0;
 var interval4;
 var depth = -1;
-var interval4 = setInterval(slide4, 2000);
+var interval4 = setInterval(slide4, 4000);
 function slide4(){
-  $(".ban > img").eq(n4).css({"display":"none", "z-index":depth++}).stop().fadeIn(1000, function(){
-    if(n4 == 4) n4 = -1;
+  $(".ban").eq(n4).css({"display":"none", "z-index":depth++}).stop().fadeIn(1000, function(){
+    if(n4 == 5) n4 = -1;
     n4++;
   });
 }
@@ -23,12 +24,12 @@ function paging4(obj){
   n4 = $(obj).index(); 
    clearInterval(interval4); 
    slide4(); 
-   interval4 = setInterval(slide4, 2000);
+   interval4 = setInterval(slide4, 4000);
  }
- $(".ban").hover(function (){
+ $(".ban_wrap").hover(function (){
 clearInterval(interval4);
  }, function (){
-   interval4 = setInterval(slide4, 2000);
+   interval4 = setInterval(slide4, 4000);
  });
   
 
