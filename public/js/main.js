@@ -1,6 +1,6 @@
 function autoHeight(){
     $(".hei-wrap").imagesLoaded().done(heiCalc);
-    $(window).resize(heiCalc).trigger("resize");	
+    $(window).resize(heiCalc);
 }
 autoHeight();
 
@@ -8,6 +8,14 @@ function heiCalc(){
 	$(".hei-wrap").each(function(){
 			$(this).height($(this).find(".hei-elem").height());
 	});
+	var banHei = 10000;
+	$(".ban").each(function(){
+		if($(this).height() < banHei){
+			banHei = $(this).height();
+		} 
+	});
+	$(".ban_wrap").height(banHei);
+	//$(".tire_box").css({"top":$(".ban_wrap").height()+"px"});
 }
 
 var n4 = 0;

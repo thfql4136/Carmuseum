@@ -31,9 +31,9 @@ margin-bottom:1%;}
 .main {width:100%; height:80%; position: relative; margin-bottom:7%;}
 
 .bg_wrap {width:100%; height:72%; }
-.bg {width:100%;  height:100%;overflow-y: hidden; }
-.ban_wrap {position: relative; width:100%; height:100%; }
-.ban{ position: absolute;  left:0;  width:100%; }
+.bg {width:100%;  height:100%;overflow-y:hidden; }
+.ban_wrap {position: relative; width:100%; height:100%; overflow:hidden;}
+.ban{ position: absolute;  left:0; width:100%; text-align:center;}
 .ban:nth-child(1){top:-50%;}
 .ban:nth-child(2){top:-50%;}
 .ban:nth-child(3){bottom:0%;}
@@ -174,7 +174,7 @@ margin:5% 0 2% 6%;}
 	.museum div {font-size: 0.8rem;}
 	.search_box {width:80%; height:12%;  border:3px solid #c6d2c9; 
 		line-height:12%;   left:10%;}
-	
+		.main {height:auto;}
 		
 }
 @media screen and (max-width:768px) {
@@ -187,6 +187,7 @@ margin:5% 0 2% 6%;}
 	.search_box {width:95%;}
 	.search_text {padding:1.5%; height:22%; line-height:22%; padding:1.5% 0;  }
 	.search > i {padding:8%;}
+	
 }
 @media screen and (max-width:515px){
 	.search_box {width:90%; height:30%;  border:3px solid #c6d2c9; 
