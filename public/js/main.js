@@ -21,7 +21,7 @@ function heiCalc(){
 var n4 = 0;
 var interval4;
 var depth = -1;
-var interval4 = setInterval(slide4, 4000);
+var interval4 = setInterval(slide4, 3000);
 function slide4(){
   $(".ban").eq(n4).css({"display":"none", "z-index":depth++}).stop().fadeIn(1000, function(){
     if(n4 == 5) n4 = -1;
@@ -32,12 +32,12 @@ function paging4(obj){
   n4 = $(obj).index(); 
    clearInterval(interval4); 
    slide4(); 
-   interval4 = setInterval(slide4, 4000);
+   interval4 = setInterval(slide4, 3000);
  }
  $(".ban_wrap").hover(function (){
 clearInterval(interval4);
  }, function (){
-   interval4 = setInterval(slide4, 4000);
+   interval4 = setInterval(slide4, 3000);
  });
   
 
@@ -217,7 +217,6 @@ $(".fac_right").click(function(){
 });
 mInit();
 
-
 var rimInterval = setInterval(rimAni, 20);
 function rimAni(){
 	var wid = $(".rim").width()/2;
@@ -226,6 +225,65 @@ function rimAni(){
 	if(wid + left <= 0) $(".rim").css({"left":0}); 
 	$(".rim").stop().css({"left":"-=1px"});
 }
+
+var prdNum = 0;
+/* $.ajax({
+	url:"../json/prds.json",
+	datatype:"json",
+	type:"post",
+	data:{id:0},
+	success: function(data){
+		console.log()
+	},
+	error: function(xhr, status, error){// 통신 상태, 지금 상태, 에러
+		alert("통신이 원할하지않습니다. \n 잠시후 다시 시도해주세요.");
+		console.log(xhr, status, error);
+	}
+}); */
+
+$(".news_title > li").click(function(){ //이벤트 선언
+	$(".news_cont").eq(prdNum).stop().animate({"top":"5%", "opacity":0}, 500 , function(){
+		$(this).css({"display":"none"});
+		
+	});
+ prdNum = $(this).index(); //클릭 된 애 값을 받아올꺼야, index는 값을 가져올때 사용
+ $(".news_cont").eq(prdNum).css({"display":"block"}).stop().animate({"top":0, "opacity":1}, 500 );
+ $(".news_title > li").css({"color":"#999"});
+$(".news_title div").css({"width":0});
+$(this).css({"color":"#4b6054"});
+$(this).children("div").css({"width":"100%"});
+});
+
+$(".news_title > li").hover(function(){//이벤트 선언
+	if($(this).index() !=prdNum){ //현재 선택된 애는 제외 시킨다
+		$(this).css({"color":"#4b6054"});
+		$(this).children("div").stop().animate({"width":"100%"}, 100);
+	}
+},function(){
+	if($(this).index() !=prdNum){
+		$(this).css({"color":"#999"});
+		$(this).children("div").stop().animate({"width":"0%"}, 100);
+	}
+});
+$(".news_title > li").eq(0).trigger("click");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
